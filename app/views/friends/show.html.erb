@@ -1,0 +1,19 @@
+<div class='jumbotron'>
+  <div class="p-5 mb-4 bg-light border rounded-3">
+
+    <h1 class='display-4'>
+      <%= @friend.first_name %> <%= @friend.last_name %>
+    </h1>
+    <hr class='my-4'>
+    <p class="lead">
+      <strong>Email:</strong>
+      <%= @friend.email %> |
+      <%= @friend.phone.insert(3, '-').insert(7, '-') %> |
+      <%= @friend.twitter %>
+    </p>
+    <hr class='my-1'>
+    <br />
+    <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %>
+    <%= link_to 'Back', friends_path, class:"btn btn-secondary" %>
+  </div>
+</div>
